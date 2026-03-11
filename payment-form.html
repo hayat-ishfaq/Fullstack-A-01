@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Checkouts - HotSpring Portable Spas</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style>
+        body {
+            background-image: url('https://picsum.photos/seed/ocean/1920/1080');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+        .main-content {
+            background-color: rgba(243, 244, 246, 0.95);
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800">
+
+    <!-- Top Bar -->
+    <div class="bg-gray-100 border-b border-gray-200 py-1 text-xs">
+        <div class="max-w-6xl mx-auto flex justify-between px-4">
+            <div>Call for Customer support: <span class="text-red-600">020 38989565</span></div>
+            <div class="flex space-x-4">
+                <a href="#" class="hover:underline">My Account</a>
+                <span class="text-gray-300">|</span>
+                <a href="#" class="hover:underline">Wishlist</a>
+                <span class="text-gray-300">|</span>
+                <a href="#" class="hover:underline">To Checkout</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Logo Bar -->
+    <div class="bg-white py-4">
+        <div class="max-w-6xl mx-auto flex justify-between items-center px-4">
+            <div class="flex items-center">
+                <h1 class="text-3xl font-bold tracking-tighter text-gray-900">HOTSPRING<sup>®</sup></h1>
+                <span class="ml-2 text-red-600 font-semibold text-sm self-end pb-1">Portable Spas</span>
+            </div>
+            <div class="border border-gray-300 rounded p-2 flex items-center space-x-2 text-sm">
+                <div class="bg-red-600 p-1 rounded">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                </div>
+                <span>My Cart: 0 items (s)</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="bg-red-600">
+        <div class="max-w-6xl mx-auto flex items-center px-4">
+            <nav class="flex text-white font-semibold text-sm uppercase">
+                <a href="#" class="py-3 px-6 hover:bg-red-700 border-r border-red-500">Catagory</a>
+                <a href="#" class="py-3 px-6 hover:bg-red-700 border-r border-red-500">Brand</a>
+                <a href="#" class="py-3 px-6 hover:bg-red-700">Info</a>
+            </nav>
+            <div class="flex-grow flex justify-end py-2">
+                <div class="flex w-full max-w-md">
+                    <input type="text" class="w-full px-3 py-1 text-sm focus:outline-none" placeholder="">
+                    <button class="bg-gray-800 text-white px-4 py-1 text-xs font-bold uppercase hover:bg-black">Search</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="max-w-6xl mx-auto my-8 main-content shadow-lg min-h-[800px] p-8">
+        <div class="text-xs text-gray-500 mb-4">
+            <a href="#" class="hover:underline">Home</a> > Payments
+        </div>
+
+        <h2 class="text-3xl font-bold mb-6">Secure Checkouts</h2>
+
+        <div class="bg-gray-100 p-8 rounded border border-gray-200">
+            <h3 class="text-sm font-bold uppercase mb-6 border-b border-gray-300 pb-2">Payment Information</h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Step 1 -->
+                <div>
+                    <h4 class="text-xl font-bold mb-6"><span class="text-red-600 text-2xl">Step 1.</span> Billing Address</h4>
+                    <form class="space-y-3 text-xs">
+                        <div class="grid grid-cols-3 items-center">
+                            <label class="font-bold">First Name <span class="text-red-600">*</span></label>
+                            <input type="text" class="col-span-2 border border-gray-300 bg-white px-2 py-1">
+                        </div>
+                        <div class="grid grid-cols-3 items-center">
+                            <label class="font-bold">Last Name <span class="text-red-600">*</span></label>
+                            <input type="text" class="col-span-2 border border-gray-300 bg-white px-2 py-1">
+                        </div>
+                        <div class="grid grid-cols-3 items-center">
+                            <label class="font-bold">Email <span class="text-red-600">*</span></label>
+                            <input type="email" class="col-span-2 border border-gray-300 bg-white px-2 py-1">
+                        </div>
+                        <div class="grid grid-cols-3 items-center">
+                            <label class="font-bold">Phone <span class="text-red-600">*</span></label>
+                            <input type="text" class="col-span-2 border border-gray-300 bg-white px-2 py-1">
+                        </div>
+                        <div class="grid grid-cols-3 items-center">
+                            <label class="font-bold">Address <span class="text-red-600">*</span></label>
+                            <input type="text" class="col-span-2 border border-gray-300 bg-white px-2 py-1">
+                        </div>
+                        <div class="grid grid-cols-3 items-center">
+                            <label class="font-bold">City <span class="text-red-600">*</span></label>
+                            <select class="col-span-2 border border-gray-300 bg-white px-2 py-1">
+                                <option>New York</option>
+                            </select>
+                        </div>
+                        <div class="grid grid-cols-3 items-center">
+                            <label class="font-bold">State <span class="text-red-600">*</span></label>
+                            <input type="text" class="col-span-2 border border-gray-300 bg-white px-2 py-1" placeholder="New York">
+                        </div>
+                        <div class="grid grid-cols-3 items-center">
+                            <label class="font-bold">Zip Code <span class="text-red-600">*</span></label>
+                            <input type="text" class="col-span-2 border border-gray-300 bg-white px-2 py-1">
+                        </div>
+                        <div class="grid grid-cols-3 items-center">
+                            <label class="font-bold">Country <span class="text-red-600">*</span></label>
+                            <select class="col-span-2 border border-gray-300 bg-white px-2 py-1">
+                                <option>United States</option>
+                            </select>
+                        </div>
+
+                        <div class="pt-4 flex items-center space-x-2">
+                            <input type="checkbox" id="different-address">
+                            <label for="different-address" class="text-blue-600 font-bold">Ship to a different address</label>
+                        </div>
+
+                        <!-- Secondary Address Form (Hidden/Visible as per design) -->
+                        <div class="space-y-3 pt-4 opacity-50">
+                            <div class="grid grid-cols-3 items-center">
+                                <label class="font-bold">First Name <span class="text-red-600">*</span></label>
+                                <input type="text" class="col-span-2 border border-gray-300 bg-white px-2 py-1">
+                            </div>
+                            <div class="grid grid-cols-3 items-center">
+                                <label class="font-bold">Last Name <span class="text-red-600">*</span></label>
+                                <input type="text" class="col-span-2 border border-gray-300 bg-white px-2 py-1">
+                            </div>
+                            <div class="grid grid-cols-3 items-center">
+                                <label class="font-bold">Email <span class="text-red-600">*</span></label>
+                                <input type="email" class="col-span-2 border border-gray-300 bg-white px-2 py-1">
+                            </div>
+                            <div class="grid grid-cols-3 items-center">
+                                <label class="font-bold">Phone <span class="text-red-600">*</span></label>
+                                <input type="text" class="col-span-2 border border-gray-300 bg-white px-2 py-1">
+                            </div>
+                            <div class="grid grid-cols-3 items-center">
+                                <label class="font-bold">Address <span class="text-red-600">*</span></label>
+                                <input type="text" class="col-span-2 border border-gray-300 bg-white px-2 py-1">
+                            </div>
+                            <div class="grid grid-cols-3 items-center">
+                                <label class="font-bold">City <span class="text-red-600">*</span></label>
+                                <select class="col-span-2 border border-gray-300 bg-white px-2 py-1">
+                                    <option>New York</option>
+                                </select>
+                            </div>
+                            <div class="grid grid-cols-3 items-center">
+                                <label class="font-bold">State <span class="text-red-600">*</span></label>
+                                <input type="text" class="col-span-2 border border-gray-300 bg-white px-2 py-1" placeholder="New York">
+                            </div>
+                            <div class="grid grid-cols-3 items-center">
+                                <label class="font-bold">Zip Code <span class="text-red-600">*</span></label>
+                                <input type="text" class="col-span-2 border border-gray-300 bg-white px-2 py-1">
+                            </div>
+                            <div class="grid grid-cols-3 items-center">
+                                <label class="font-bold">Country <span class="text-red-600">*</span></label>
+                                <select class="col-span-2 border border-gray-300 bg-white px-2 py-1">
+                                    <option>United States</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Step 2 & 3 -->
+                <div class="space-y-12">
+                    <!-- Step 2 -->
+                    <div>
+                        <h4 class="text-xl font-bold mb-6"><span class="text-red-600 text-2xl">Step 2.</span> Card Details</h4>
+                        <form class="space-y-3 text-xs">
+                            <div class="grid grid-cols-3 items-center">
+                                <label class="font-bold">Card Type <span class="text-red-600">*</span></label>
+                                <select class="col-span-2 border border-gray-300 bg-white px-2 py-1 text-gray-400">
+                                    <option>Master Card</option>
+                                </select>
+                            </div>
+                            <div class="grid grid-cols-3 items-center">
+                                <label class="font-bold">Card Number <span class="text-red-600">*</span></label>
+                                <input type="text" class="col-span-2 border border-gray-300 bg-white px-2 py-1" placeholder="1234 5678 9123 4567">
+                            </div>
+                            <div class="grid grid-cols-3 items-center">
+                                <label class="font-bold">Expiration <span class="text-red-600">*</span></label>
+                                <div class="col-span-2 flex space-x-2">
+                                    <select class="flex-grow border border-gray-300 bg-white px-2 py-1">
+                                        <option>01</option>
+                                    </select>
+                                    <select class="flex-grow border border-gray-300 bg-white px-2 py-1 text-gray-400">
+                                        <option>December</option>
+                                    </select>
+                                    <select class="flex-grow border border-gray-300 bg-white px-2 py-1 text-gray-400">
+                                        <option>2015</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-3 items-center">
+                                <label class="font-bold">Secure Code <span class="text-red-600">*</span></label>
+                                <input type="text" class="col-span-2 border border-gray-300 bg-white px-2 py-1">
+                            </div>
+
+                            <p class="text-[10px] text-gray-500 mt-4 italic">Note: Please ensure the billing address you enter matches your credit card billing address.</p>
+                            <div class="flex items-center space-x-2 mt-2">
+                                <input type="checkbox" id="terms">
+                                <label for="terms" class="text-[10px] text-blue-600 font-bold">I Accept terms and Conditions</label>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div>
+                        <h4 class="text-xl font-bold mb-6"><span class="text-red-600 text-2xl">Step 3.</span> Review Your Order</h4>
+                        <table class="w-full text-xs mb-4">
+                            <thead>
+                                <tr class="border-b border-gray-300">
+                                    <th class="text-left py-2">Item name</th>
+                                    <th class="text-center py-2">price</th>
+                                    <th class="text-center py-2">Quantity</th>
+                                    <th class="text-right py-2">Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="py-2">XS SCYVA X SERUES 119</td>
+                                    <td class="py-2 text-center">$ 699</td>
+                                    <td class="py-2 text-center">1000</td>
+                                    <td class="py-2 text-right">12000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="flex justify-between items-center border-t border-gray-300 pt-4 mb-8">
+                            <span class="font-bold">Total with shipping:</span>
+                            <span class="font-bold">$ 699.00</span>
+                        </div>
+
+                        <div class="flex justify-end">
+                            <button class="bg-green-600 text-white px-6 py-2 rounded flex items-center space-x-2 hover:bg-green-700 shadow font-bold text-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Place Your Order</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 flex flex-col items-end">
+                <div class="text-xs text-right mb-4">
+                    <p class="text-gray-500">Cart summary <span class="text-gray-400">(2 items)</span></p>
+                    <p class="text-lg font-bold">Total: $21.00</p>
+                </div>
+                <div class="flex space-x-2">
+                    <button class="bg-white border border-gray-300 px-4 py-2 text-xs text-blue-600 font-bold hover:bg-gray-50">Continue shopping</button>
+                    <button class="bg-red-600 text-white px-4 py-2 text-xs font-bold uppercase hover:bg-red-700">Proceed to checkout</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Brand Logos -->
+        <div class="mt-12 border border-gray-200 bg-white p-4 flex justify-around items-center grayscale opacity-70">
+            <img src="https://picsum.photos/seed/save/150/50" alt="Save $1,000s" class="h-12">
+            <img src="https://picsum.photos/seed/oceanic/150/50" alt="Oceanic Spa" class="h-12">
+            <img src="https://picsum.photos/seed/caldera/150/50" alt="Caldera Spas" class="h-12">
+            <img src="https://picsum.photos/seed/island/150/50" alt="Island Spas" class="h-12">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-[#001f3f] text-gray-300 py-12">
+        <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="text-white font-bold uppercase mb-4 text-sm">Contact Us</h3>
+                <p class="text-xs mb-2">yoursitename.com</p>
+                <p class="text-xs font-bold mb-2">CALL 24/7: 888 - 201 -8899</p>
+                <p class="text-xs mb-1">Your Address:</p>
+                <p class="text-xs mb-1">Street</p>
+                <p class="text-xs mb-1">State & Zip Code</p>
+                <p class="text-xs mb-2">City & Country</p>
+                <p class="text-xs">Email: servicemail@yoursitename.com</p>
+                <div class="flex space-x-2 mt-4">
+                    <div class="bg-blue-400 p-1 rounded-full w-6 h-6 flex items-center justify-center"><i class="text-[10px] text-white">t</i></div>
+                    <div class="bg-blue-600 p-1 rounded-full w-6 h-6 flex items-center justify-center"><i class="text-[10px] text-white">f</i></div>
+                    <div class="bg-blue-800 p-1 rounded-full w-6 h-6 flex items-center justify-center"><i class="text-[10px] text-white">in</i></div>
+                    <div class="bg-red-600 p-1 rounded-full w-6 h-6 flex items-center justify-center"><i class="text-[10px] text-white">g+</i></div>
+                    <div class="bg-red-700 p-1 rounded-full w-6 h-6 flex items-center justify-center"><i class="text-[10px] text-white">y</i></div>
+                    <div class="bg-red-800 p-1 rounded-full w-6 h-6 flex items-center justify-center"><i class="text-[10px] text-white">p</i></div>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-white font-bold uppercase mb-4 text-sm">Information</h3>
+                <ul class="text-xs space-y-2">
+                    <li><a href="#" class="hover:text-white border-b border-gray-700 pb-1 block">ABOUT US</a></li>
+                    <li><a href="#" class="hover:text-white border-b border-gray-700 pb-1 block">CUSTOMER SERVICE</a></li>
+                    <li><a href="#" class="hover:text-white border-b border-gray-700 pb-1 block">PRIVACY POLICY</a></li>
+                    <li><a href="#" class="hover:text-white border-b border-gray-700 pb-1 block">SITE MAP</a></li>
+                    <li><a href="#" class="hover:text-white border-b border-gray-700 pb-1 block">SEARCH TERMS</a></li>
+                    <li><a href="#" class="hover:text-white border-b border-gray-700 pb-1 block">CONATACT US</a></li>
+                    <li><a href="#" class="hover:text-white pb-1 block">ABOUT US</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-white font-bold uppercase mb-4 text-sm">My Account</h3>
+                <ul class="text-xs space-y-2">
+                    <li><a href="#" class="hover:text-white border-b border-gray-700 pb-1 block">SIGN IN</a></li>
+                    <li><a href="#" class="hover:text-white border-b border-gray-700 pb-1 block">VIEW CART</a></li>
+                    <li><a href="#" class="hover:text-white pb-1 block">MY WISHLIST</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-white font-bold uppercase mb-4 text-sm">Signup for a News Letter</h3>
+                <p class="text-xs mb-4">SIGN UP FOR OUR NEWS LETTER:</p>
+                <div class="flex mb-4">
+                    <input type="text" class="bg-gray-200 w-full px-3 py-2 text-black focus:outline-none">
+                </div>
+                <p class="text-xs mb-2 uppercase">Payment Solutions</p>
+                <div class="flex space-x-1 grayscale opacity-80">
+                    <img src="https://picsum.photos/seed/visa/30/20" alt="Visa">
+                    <img src="https://picsum.photos/seed/master/30/20" alt="MasterCard">
+                    <img src="https://picsum.photos/seed/amex/30/20" alt="Amex">
+                    <img src="https://picsum.photos/seed/paypal/30/20" alt="PayPal">
+                </div>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto px-4 mt-12 pt-8 border-t border-gray-700 text-center text-[10px]">
+            © 2014 Hottubspaservice.com. All Rights Reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
