@@ -1,0 +1,884 @@
+/* ===================================
+   HOTSPRING Main Homepage Styles
+   =================================== */
+
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #1f2937;
+    overflow-x: hidden;
+    background: #f9fafb;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #dc2626;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #b91c1c;
+}
+
+/* ===================================
+   Header & Navigation Styles
+   =================================== */
+
+.cart-widget {
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.cart-widget:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#cart-count {
+    font-weight: bold;
+}
+
+/* ===================================
+   Hero Slider Styles
+   =================================== */
+
+.hero-slider {
+    position: relative;
+    overflow: hidden;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background: rgba(220, 38, 38, 0.8);
+    transform: scale(1.1);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 20px;
+}
+
+.swiper-pagination-bullet {
+    background: #fff;
+    opacity: 0.7;
+}
+
+.swiper-pagination-bullet-active {
+    background: #dc2626;
+    opacity: 1;
+}
+
+.slide-title {
+    animation: slideInLeft 1s cubic-bezier(0.4, 0, 0.2, 1);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.5);
+    line-height: 1;
+}
+
+.slide-title span {
+    display: block;
+    line-height: 0.9;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-80px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.spa-image-container {
+    animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===================================
+   Promo Banners Styles
+   =================================== */
+
+.promo-card {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.promo-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+    transition: left 0.6s ease;
+}
+
+.promo-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.promo-card:hover::before {
+    left: 100%;
+}
+
+.promo-card:hover::after {
+    opacity: 1;
+}
+
+.promo-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* ===================================
+   Product Card Styles
+   =================================== */
+
+.product-card {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    background: #ffffff;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.product-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(220, 38, 38, 0.05), transparent);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.product-card:hover::before {
+    opacity: 1;
+}
+
+.product-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(220, 38, 38, 0.1);
+}
+
+.product-card img,
+.product-card svg {
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.product-card:hover img,
+.product-card:hover svg {
+    transform: scale(1.08) rotate(2deg);
+}
+
+.product-card button {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.product-card button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(220, 38, 38, 0.35);
+}
+
+.product-card button:active {
+    transform: translateY(0);
+}
+
+.product-card a {
+    transition: all 0.2s ease;
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.product-card a:hover {
+    transform: translateX(2px);
+}
+
+/* ===================================
+   Partner Logos Styles
+   =================================== */
+
+.partner-logo {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.partner-logo:hover {
+    transform: scale(1.1);
+}
+
+.partner-logo svg {
+    filter: grayscale(0%);
+    transition: filter 0.3s ease;
+}
+
+.partner-logo:not(:hover) svg {
+    filter: grayscale(30%);
+}
+
+/* ===================================
+   Footer Styles
+   =================================== */
+
+footer h3 {
+    position: relative;
+    padding-bottom: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+footer h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, #dc2626, #991b1b);
+    border-radius: 2pxpx;
+}
+
+.product-card a:hover {
+    transform: translateX(2px);
+}
+
+/* ===================================
+   Partner Logos Styles
+   =================================== */
+
+.partner-logo {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.partner-logo:hover {
+    transform: scale(1.1);
+}
+
+.partner-logo svg {
+    filter: grayscale(0%);
+    transition: filter 0.3s ease;
+}
+
+.partner-logo:not(:hover) svg {
+    filter: grayscale(30%);
+}
+
+/* ===================================
+   Footer Styles
+   =================================== */
+
+footer h3 {
+    position: relative;
+    padding-bottom: 10px;
+}
+
+footer h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: #dc2626;
+}
+
+#newsletterForm input:focus {
+    transform: scale(1.02);
+    transition: transform 0.2s ease;
+}
+
+/* ===================================
+   Animations
+   =================================== */
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Page Load Animation */
+body {
+    animation: fadeIn 0.5s ease-in;
+}
+
+/* ===================================
+   Notification Toast Styles
+   =================================== */
+
+.notification-toast {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #fff;
+    padding: 16px 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 9999;
+    animation: slideInRight 0.3s ease-out;
+    max-width: 350px;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.notification-toast.success {
+    border-left: 4px solid #10b981;
+}
+
+.notification-toast.error {
+    border-left: 4px solid #dc2626;
+}
+
+.notification-toast.info {
+    border-left: 4px solid #3b82f6;
+}
+
+.notification-icon {
+    font-size: 24px;
+}
+
+.notification-toast.success .notification-icon {
+    color: #10b981;
+}
+
+.notification-toast.error .notification-icon {
+    color: #dc2626;
+}
+
+.notification-toast.info .notification-icon {
+    color: #3b82f6;
+}
+
+.notification-content h4 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+.notification-content p {
+    margin: 0;
+    font-size: 12px;
+    color: #666;
+}
+
+.notification-close {
+    margin-left: auto;
+    cursor: pointer;
+    color: #999;
+    font-size: 20px;
+    transition: color 0.2s ease;
+}
+
+.notification-close:hover {
+    color: #333;
+}
+
+/* ===================================
+   Loading Spinner Styles
+   =================================== */
+
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9998;
+    animation: fadeIn 0.3s ease;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #dc2626;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* ===================================
+   Modal Styles
+   =================================== */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 500px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    animation: slideInUp 0.3s ease-out;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+.modal-header h2 {
+    margin: 0;
+    color: #333;
+    font-size: 24px;
+}
+
+.modal-close {
+    cursor: pointer;
+    font-size: 28px;
+    color: #999;
+    transition: color 0.2s ease;
+    background: none;
+    border: none;
+}
+
+.modal-close:hover {
+    color: #dc2626;
+}
+
+/* ===================================
+   Search Bar Enhancements
+   =================================== */
+
+nav input[type="text"]:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.2);
+}
+
+/* ===================================
+   Responsive Design
+   =================================== */
+
+/* ===================================
+   Tablet (768px and below) */
+@media (max-width: 768px) {
+    .hero-slider .swiper-slide {
+        font-size: 14px;
+    }
+    
+    .hero-slider h2 {
+        font-size: 32px !important;
+        line-height: 1.2 !important;
+    }
+    
+    .spa-image-container svg {
+        width: 300px;
+        height: 225px;
+    }
+    
+    .product-card {
+        margin-bottom: 20px;
+    }
+    
+    .notification-toast {
+        right: 15px;
+        bottom: 15px;
+        max-width: 280px;
+    }
+    
+    .modal-content {
+        padding: 20px;
+    }
+    
+    .promo-card h3 {
+        font-size: 24px !important;
+    }
+}
+
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+    .hero-slider h2 {
+        font-size: 22px !important;
+    }
+    
+    .hero-slider p {
+        font-size: 12px;
+    }
+    
+    .spa-image-container svg {
+        width: 250px;
+        height: 180px;
+    }
+    
+    .swiper-button-next,
+    .swiper-button-prev {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+        font-size: 16px;
+    }
+    
+    .promo-card h3 {
+        font-size: 18px !important;
+    }
+    
+    .partner-logo svg {
+        height: 50px;
+    }
+    
+    footer {
+        font-size: 14px;
+    }
+}
+
+/* ===================================
+   Smooth Scroll Behavior
+   =================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ===================================
+   Selection Styles
+   =================================== */
+
+::selection {
+    background: #dc2626;
+    color: #fff;
+}
+
+::-moz-selection {
+    background: #dc2626;
+    color: #fff;
+}
+
+/* ===================================
+   Accessibility
+   =================================== */
+
+a:focus,
+button:focus,
+input:focus {
+    outline: 2px solid #dc2626;
+    outline-offset: 2px;
+}
+
+/* Skip to main content link */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #dc2626;
+    color: #fff;
+    padding: 8px;
+    text-decoration: none;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* ===================================
+   Print Styles
+   =================================== */
+
+@media print {
+    .hero-slider,
+    .promo-banners,
+    footer,
+    nav,
+    .cart-widget {
+        display: none;
+    }
+    
+    .product-card {
+        page-break-inside: avoid;
+    }
+}
+
+/* ===================================
+   Utility Classes
+   =================================== */
+
+.text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hover-lift {
+    transition: transform 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+}
+
+.bg-overlay {
+    position: relative;
+}
+
+.bg-overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+/* Add after utility classes */
+
+/* ===================================
+   Enhanced Button Styles
+   =================================== */
+
+button, .btn {
+    position: relative;
+    overflow: hidden;
+}
+
+button::before, .btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+button:hover::before, .btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* ===================================
+   Improved Typography
+   =================================== */
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 800;
+    letter-spacing: -0.025em;
+}
+
+.text-shadow {
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* ===================================
+   Card Enhancements
+   =================================== */
+
+.card-shine {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-shine::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    bottom: -50%;
+    left: -50%;
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.05) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: rotateZ(60deg) translateY(-100%);
+    transition: transform 0.8s;
+}
+
+.card-shine:hover::after {
+    transform: rotateZ(60deg) translateY(100%);
+}
+
+/* ===================================
+   Gradient Text
+   =================================== */
+
+.gradient-text {
+    background: linear-gradient(135deg, #dc2626, #991b1b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ===================================
+   Section Dividers
+   =================================== */
+
+.section-divider {
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #dc2626, #ef4444);
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+/* ===================================
+   Badge Styles
+   =================================== */
+
+.badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: linear-gradient(135deg, #dc2626, #991b1b);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border-radius: 9999px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 8px rgba(220, 38, 38, 0.3);
+}

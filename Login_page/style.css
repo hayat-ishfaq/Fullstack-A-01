@@ -1,0 +1,260 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+/* Partner Logos Animation */
+.partner-logo {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+.partner-logo:hover {
+    transform: scale(1.05);
+}
+
+/* Product Carousel */
+#productsCarousel {
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: #ef4444 #f3f4f6;
+}
+
+#productsCarousel::-webkit-scrollbar {
+    height: 8px;
+}
+
+#productsCarousel::-webkit-scrollbar-track {
+    background: #f3f4f6;
+    border-radius: 4px;
+}
+
+#productsCarousel::-webkit-scrollbar-thumb {
+    background: #ef4444;
+    border-radius: 4px;
+}
+
+#productsCarousel::-webkit-scrollbar-thumb:hover {
+    background: #dc2626;
+}
+
+/* Form Input Focus Effects */
+input:focus {
+    transform: scale(1.01);
+    transition: all 0.2s ease;
+}
+
+/* Button Hover Effects */
+button {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Notification Toast */
+#notification {
+    z-index: 9999;
+    min-width: 300px;
+}
+
+#notification.show {
+    display: block !important;
+    animation: slideInRight 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#notification.hide {
+    animation: slideOutRight 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutRight {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+}
+
+/* Navigation Arrows for Carousel */
+#prevBtn, #nextBtn {
+    transition: all 0.3s ease;
+}
+
+#prevBtn:hover, #nextBtn:hover {
+    background-color: #f3f4f6;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Logo Styles */
+header h1 {
+    letter-spacing: -0.5px;
+}
+
+/* Card Shadow Enhancement */
+.shadow-lg {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Link Hover Effects */
+a {
+    transition: color 0.2s ease;
+}
+
+/* Form Validation Styles */
+.input-error {
+    border-color: #ef4444 !important;
+    animation: shake 0.3s;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    75% { transform: translateX(10px); }
+}
+
+.input-success {
+    border-color: #10b981 !important;
+}
+
+/* Loading Spinner */
+.spinner {
+    border: 3px solid #f3f4f6;
+    border-top: 3px solid #ef4444;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    nav .flex {
+        flex-direction: column;
+    }
+
+    nav input[type="text"] {
+        width: 100%;
+    }
+
+    #productsCarousel {
+        gap: 1rem;
+    }
+
+    .partner-logo svg {
+        height: 3rem;
+    }
+}
+
+@media (max-width: 640px) {
+    header .flex {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .grid-cols-1 {
+        grid-template-columns: 1fr;
+    }
+
+    footer .grid-cols-4 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Product Card Hover Effects */
+#productsCarousel > div {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#productsCarousel > div:hover {
+    transform: translateY(-5px);
+}
+
+#productsCarousel img {
+    transition: transform 0.3s ease;
+}
+
+#productsCarousel > div:hover img {
+    transform: scale(1.05);
+}
+
+/* Custom Checkbox */
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: #ef4444;
+}
+
+/* Social Media Icons */
+footer a[href*="twitter"],
+footer a[href*="facebook"],
+footer a[href*="linkedin"],
+footer a[href*="google"],
+footer a[href*="youtube"],
+footer a[href*="pinterest"] {
+    transition: all 0.3s ease;
+}
+
+footer a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Search Input Enhancement */
+nav input[type="text"] {
+    transition: all 0.3s ease;
+}
+
+nav input[type="text"]:focus {
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+/* Payment Solutions Images */
+footer img {
+    transition: transform 0.2s ease;
+}
+
+footer img:hover {
+    transform: scale(1.1);
+}

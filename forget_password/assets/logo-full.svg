@@ -1,0 +1,26 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <!-- Main Circle Background -->
+    <circle cx="100" cy="100" r="95" fill="#DC2626"/>
+    <circle cx="100" cy="100" r="90" fill="none" stroke="#FFF" stroke-width="2" opacity="0.3"/>
+    
+    <!-- Hot Spring Symbol -->
+    <circle cx="100" cy="80" r="25" fill="#FFF" opacity="0.9"/>
+    <circle cx="100" cy="80" r="20" fill="none" stroke="#DC2626" stroke-width="2"/>
+    
+    <!-- Steam Lines -->
+    <path d="M 85 55 Q 82 45 85 35" stroke="#FFF" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.8"/>
+    <path d="M 100 50 Q 98 40 100 30" stroke="#FFF" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.8"/>
+    <path d="M 115 55 Q 118 45 115 35" stroke="#FFF" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.8"/>
+    
+    <!-- Spa Bubbles -->
+    <circle cx="100" cy="120" r="30" fill="none" stroke="#FFF" stroke-width="2" opacity="0.6"/>
+    <circle cx="70" cy="135" r="5" fill="#FFF" opacity="0.7"/>
+    <circle cx="85" cy="128" r="4" fill="#FFF" opacity="0.7"/>
+    <circle cx="115" cy="128" r="4" fill="#FFF" opacity="0.7"/>
+    <circle cx="130" cy="135" r="5" fill="#FFF" opacity="0.7"/>
+    <circle cx="100" cy="145" r="6" fill="#FFF" opacity="0.7"/>
+    
+    <!-- Wave Pattern -->
+    <path d="M 60 160 Q 80 155 100 160 Q 120 165 140 160" stroke="#FFF" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.8"/>
+    <path d="M 60 170 Q 80 165 100 170 Q 120 175 140 170" stroke="#FFF" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.6"/>
+</svg>

@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HOTSPRING Portable Spas - Premium hot tubs, spas, and home theater systems. Save up to 50% on select models.">
+    <meta name="keywords" content="hotspring, hot tub, spa, portable spa, home theater spa, jacuzzi">
+    <title>HOTSPRING Portable Spas - Premium Hot Tubs & Spas</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Swiper CSS for Slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100">
+    
+    <!-- Top Bar -->
+    <div class="bg-gradient-to-r from-blue-900 to-blue-800 text-sm py-2.5">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+            <div class="text-white mb-2 md:mb-0">
+                Call for Customer support: <span class="text-yellow-300 font-bold">020 39889565</span>
+            </div>
+            <div class="flex space-x-6 text-white">
+                <a href="#" class="hover:text-yellow-300 transition font-medium">My Account</a>
+                <a href="#" class="hover:text-yellow-300 transition font-medium">Wishlist</a>
+                <a href="#" class="hover:text-yellow-300 transition font-medium">To Checkout</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b border-gray-200">
+        <div class="container mx-auto px-4 py-5">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <!-- Logo -->
+                <div class="mb-4 md:mb-0 flex items-center">
+                    <svg width="55" height="55" viewBox="0 0 50 50" class="mr-3">
+                        <defs>
+                            <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#DC2626;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#991B1B;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <rect x="5" y="5" width="40" height="40" rx="6" fill="url(#logoGrad)"/>
+                        <circle cx="25" cy="20" r="8" fill="#FFF" opacity="0.95"/>
+                        <path d="M 15 32 Q 25 38 35 32" stroke="#FFF" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+                        <circle cx="18" cy="28" r="2.5" fill="#FFF" opacity="0.9"/>
+                        <circle cx="32" cy="28" r="2.5" fill="#FFF" opacity="0.9"/>
+                    </svg>
+                    <div>
+                        <h1 class="text-4xl font-extrabold tracking-tight">
+                            <span class="bg-gradient-to-r from-red-600 to-red-700 bg-clip-text text-transparent">HOTSPRING</span>
+                            <span class="text-gray-500 text-xl align-super">®</span>
+                        </h1>
+                        <p class="text-xs text-gray-500 font-medium tracking-wide">Portable Spas</p>
+                    </div>
+                </div>
+
+                <!-- Cart -->
+                <div class="cart-widget bg-gradient-to-r from-red-600 to-red-700 text-white px-6 py-3 rounded-lg flex items-center space-x-3 cursor-pointer hover:from-red-700 hover:to-red-800 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                    <i class="fas fa-shopping-cart text-lg"></i>
+                    <span class="font-semibold">My Cart : <span id="cart-count" class="font-bold">0</span> items</span>
+                    <i class="fas fa-chevron-down ml-1"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Top Navigation -->
+    <nav class="bg-white border-b-2 border-gray-100">
+        <div class="container mx-auto px-4">
+            <ul class="flex flex-wrap justify-center space-x-1 text-sm md:text-base">
+                <li><a href="#" class="block py-4 px-6 text-red-600 font-bold hover:text-red-700 transition uppercase border-b-3 border-red-600 bg-red-50">Home</a></li>
+                <li><a href="#" class="block py-4 px-6 text-gray-700 hover:text-red-600 hover:bg-gray-50 transition uppercase font-semibold">Products</a></li>
+                <li><a href="#" class="block py-4 px-6 text-gray-700 hover:text-red-600 hover:bg-gray-50 transition uppercase font-semibold">Special Offers</a></li>
+                <li><a href="#" class="block py-4 px-6 text-gray-700 hover:text-red-600 hover:bg-gray-50 transition uppercase font-semibold">Clinic</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Navigation -->
+    <nav class="bg-red-600 text-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <ul class="flex flex-wrap space-x-0 md:space-x-6 text-center w-full md:w-auto">
+                    <li class="w-full md:w-auto">
+                        <a href="#" class="block py-3 px-4 hover:bg-red-700 transition uppercase font-semibold">Category</a>
+                    </li>
+                    <li class="w-full md:w-auto">
+                        <a href="#" class="block py-3 px-4 hover:bg-red-700 transition uppercase font-semibold">Brand</a>
+                    </li>
+                    <li class="w-full md:w-auto">
+                        <a href="#" class="block py-3 px-4 hover:bg-red-700 transition uppercase font-semibold">Info</a>
+                    </li>
+                </ul>
+                
+                <!-- Search Bar -->
+                <div class="flex w-full md:w-auto mt-3 md:mt-0 mb-3 md:mb-0">
+                    <input type="text" placeholder="Search..." class="px-4 py-2 w-full md:w-80 text-gray-800 rounded-l focus:outline-none">
+                    <button class="bg-gray-800 px-6 py-2 rounded-r hover:bg-gray-900 transition uppercase font-semibold">Search</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Slider -->
+    <section class="hero-slider bg-gray-200 relative">
+        <div class="swiper heroSwiper">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                    <div class="relative h-96 md:h-[500px]">
+                        <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1600&h=900&fit=crop" 
+                             alt="Luxury Hot Tub" 
+                             class="w-full h-full object-cover">
+                    </div>
+                </div>
+                
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                    <div class="relative h-96 md:h-[500px]">
+                        <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1600&h=900&fit=crop" 
+                             alt="Premium Spa"
+                             class="w-full h-full object-cover">
+                    </div>
+                </div>
+                
+                <!-- Slide 3 -->
+                <div class="swiper-slide">
+                    <div class="relative h-96 md:h-[500px]">
+                        <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1600&h=900&fit=crop" 
+                             alt="Special Offers" 
+                             class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Navigation -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!-- Promo Banners -->
+    <section class="promo-banners py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <!-- 5-7 Person Spa -->
+                <div class="promo-card bg-black rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-all cursor-pointer h-56 relative">
+                    <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&h=400&fit=crop" 
+                         alt="5-7 Person Spa" 
+                         class="absolute inset-0 w-full h-full object-cover opacity-60">
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-900/50 to-black/60"></div>
+                    <div class="p-6 h-full flex flex-col justify-end text-white relative z-10">
+                        <h3 class="text-2xl md:text-3xl font-black mb-2 tracking-wide">5-7 PERSON<br>SPA</h3>
+                        <p class="text-xs text-gray-200 leading-relaxed font-medium uppercase">THIS IS PHOTOSHOP'S VERSION OF LOREM IPSUM PROIN<br>GRAVIDA NIBH VEL VELIT AUCTOR</p>
+                    </div>
+                </div>
+                
+                <!-- TV Theater Spa -->
+                <div class="promo-card bg-black rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-all cursor-pointer h-56 relative">
+                    <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&h=400&fit=crop" 
+                         alt="TV Theater Spa" 
+                         class="absolute inset-0 w-full h-full object-cover opacity-60">
+                    <div class="absolute inset-0 bg-gradient-to-br from-slate-700/50 to-black/60"></div>
+                    <div class="p-6 h-full flex flex-col justify-end text-white relative z-10">
+                        <h3 class="text-2xl md:text-3xl font-black mb-2 tracking-wide">TV THEATER SPA</h3>
+                        <p class="text-xs text-gray-200 leading-relaxed font-medium uppercase">THIS IS PHOTOSHOP'S VERSION OF LOREM IPSUM PROIN<br>GRAVIDA NIBH VEL VELIT AUCTOR</p>
+                    </div>
+                </div>
+                
+                <!-- Save 50% -->
+                <div class="promo-card bg-gradient-to-br from-red-600 to-red-700 rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-all cursor-pointer h-56 relative">
+                    <div class="h-full flex flex-col justify-center items-center text-white text-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-transparent to-red-800 opacity-20"></div>
+                        <div class="relative z-10">
+                            <h3 class="text-6xl md:text-7xl font-black mb-2 tracking-wide">SAVE<br><span class="text-yellow-300">50%</span></h3>
+                            <p class="text-xs text-red-100 leading-relaxed font-semibold uppercase px-4">THIS IS PHOTOSHOP'S VERSION OF LOREM IPSUM PROIN<br>GRAVIDA NIBH VEL VELIT AUCTOR</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Products Section -->
+    <section class="new-products py-16 bg-gradient-to-b from-gray-50 to-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-3 uppercase tracking-tight">New Products</h2>
+                <div class="w-24 h-1 bg-red-600 mx-auto mb-3"></div>
+                <p class="text-gray-600 text-lg">Discover our latest collection of premium spas</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Product Card 1 -->
+                <div class="product-card bg-white border-2 border-gray-100 rounded-2xl overflow-hidden hover:shadow-2xl transition-all card-shine">
+                    <div class="relative group">
+                        <div class="aspect-square bg-gray-100 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=500&h=500&fit=crop" 
+                                 alt="Luxury Hot Tub" 
+                                 class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                                 loading="lazy">
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-black text-gray-900 mb-2 uppercase text-sm tracking-wider">XS Scuba X Series 119</h3>
+                        <p class="text-xs text-gray-500 mb-4 leading-relaxed">The goals of our stores are very reliable and fair and we care about the customer</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-3xl font-black text-red-600">$500.00</span>
+                        </div>
+                        <button class="w-full bg-gradient-to-r from-red-600 to-red-700 text-white py-3 rounded-xl hover:from-red-700 hover:to-red-800 transition-all font-bold text-sm flex items-center justify-center shadow-lg hover:shadow-xl transform hover:-translate-y-1 add-to-cart-btn">
+                            <i class="fas fa-shopping-cart mr-2"></i>
+                            ADD TO CART
+                        </button>
+                        <div class="flex justify-between mt-4 text-xs">
+                            <a href="#" class="text-red-600 hover:text-red-700 font-bold uppercase tracking-wide">ADD TO WISHLIST</a>
+                            <a href="#" class="text-red-600 hover:text-red-700 font-bold uppercase tracking-wide">MORE DETAILS</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="product-card bg-white border-2 border-gray-100 rounded-2xl overflow-hidden hover:shadow-2xl transition-all card-shine">
+                    <div class="relative group">
+                        <div class="aspect-square bg-gray-100 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=500&h=500&fit=crop" 
+                                 alt="Outdoor Spa" 
+                                 class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                                 loading="lazy">
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-black text-gray-900 mb-2 uppercase text-sm tracking-wider">XS Scuba X Series 119</h3>
+                        <p class="text-xs text-gray-500 mb-4 leading-relaxed">The goals of our stores are very reliable and fair and we care about the customer</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-3xl font-black text-red-600">$500.00</span>
+                        </div>
+                        <button class="w-full bg-gradient-to-r from-red-600 to-red-700 text-white py-3 rounded-xl hover:from-red-700 hover:to-red-800 transition-all font-bold text-sm flex items-center justify-center shadow-lg hover:shadow-xl transform hover:-translate-y-1 add-to-cart-btn">
+                            <i class="fas fa-shopping-cart mr-2"></i>
+                            ADD TO CART
+                        </button>
+                        <div class="flex justify-between mt-4 text-xs">
+                            <a href="#" class="text-red-600 hover:text-red-700 font-bold uppercase tracking-wide">ADD TO WISHLIST</a>
+                            <a href="#" class="text-red-600 hover:text-red-700 font-bold uppercase tracking-wide">MORE DETAILS</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="product-card bg-white border-2 border-gray-100 rounded-2xl overflow-hidden hover:shadow-2xl transition-all card-shine">
+                    <div class="relative group">
+                        <div class="aspect-square bg-gray-100 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=500&h=500&fit=crop" 
+                                 alt="5-Person Spa" 
+                                 class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                                 loading="lazy">
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-black text-gray-900 mb-2 uppercase text-sm tracking-wider">XS Scuba X Series 119</h3>
+                        <p class="text-xs text-gray-500 mb-4 leading-relaxed">The goals of our stores are very reliable and fair and we care about the customer</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-3xl font-black text-red-600">$500.00</span>
+                        </div>
+                        <button class="w-full bg-gradient-to-r from-red-600 to-red-700 text-white py-3 rounded-xl hover:from-red-700 hover:to-red-800 transition-all font-bold text-sm flex items-center justify-center shadow-lg hover:shadow-xl transform hover:-translate-y-1 add-to-cart-btn">
+                            <i class="fas fa-shopping-cart mr-2"></i>
+                            ADD TO CART
+                        </button>
+                        <div class="flex justify-between mt-4 text-xs">
+                            <a href="#" class="text-red-600 hover:text-red-700 font-bold uppercase tracking-wide">ADD TO WISHLIST</a>
+                            <a href="#" class="text-red-600 hover:text-red-700 font-bold uppercase tracking-wide">MORE DETAILS</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 4 -->
+                <div class="product-card bg-white border-2 border-gray-100 rounded-2xl overflow-hidden hover:shadow-2xl transition-all card-shine">
+                    <div class="relative group">
+                        <div class="aspect-square bg-gray-100 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=500&h=500&fit=crop" 
+                                 alt="Premium Jacuzzi" 
+                                 class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                                 loading="lazy">
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-black text-gray-900 mb-2 uppercase text-sm tracking-wider">XS Scuba X Series 119</h3>
+                        <p class="text-xs text-gray-500 mb-4 leading-relaxed">The goals of our stores are very reliable and fair and we care about the customer</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-3xl font-black text-red-600">$500.00</span>
+                        </div>
+                        <button class="w-full bg-gradient-to-r from-red-600 to-red-700 text-white py-3 rounded-xl hover:from-red-700 hover:to-red-800 transition-all font-bold text-sm flex items-center justify-center shadow-lg hover:shadow-xl transform hover:-translate-y-1 add-to-cart-btn">
+                            <i class="fas fa-shopping-cart mr-2"></i>
+                            ADD TO CART
+                        </button>
+                        <div class="flex justify-between mt-4 text-xs">
+                            <a href="#" class="text-red-600 hover:text-red-700 font-bold uppercase tracking-wide">ADD TO WISHLIST</a>
+                            <a href="#" class="text-red-600 hover:text-red-700 font-bold uppercase tracking-wide">MORE DETAILS</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Cards 5-8 (Second Row) -->
+                <div class="product-card bg-white border-2 border-gray-100 rounded-2xl overflow-hidden hover:shadow-2xl transition-all card-shine">
+                    <div class="relative group">
+                        <div class="aspect-square bg-gray-100 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1597218868981-1b68e15f0065?w=500&h=500&fit=crop" 
+                                 alt="Modern Hot Tub" 
+                                 class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                                 loading="lazy">
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-gray-800 mb-2 uppercase text-sm">XS Scuba X Series 119</h3>
+                        <p class="text-xs text-gray-600 mb-3">The goals of our stores are very reliable and fair and we care about the customer</p>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-2xl font-bold text-red-600">$500.00</span>
+                        </div>
+                        <button class="w-full bg-red-600 text-white py-2 rounded hover:bg-red-700 transition font-semibold flex items-center justify-center add-to-cart-btn">
+                            <i class="fas fa-shopping-cart mr-2"></i>
+                            ADD TO CART
+                        </button>
+                        <div class="flex justify-between mt-3 text-xs">
+                            <a href="#" class="text-red-600 hover:text-red-700">ADD TO WISHLIST</a>
+                            <a href="#" class="text-red-600 hover:text-red-700">MORE DETAILS</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card bg-white border-2 border-gray-100 rounded-2xl overflow-hidden hover:shadow-2xl transition-all card-shine">
+                    <div class="relative group">
+                        <div class="aspect-square bg-gray-100 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=500&h=500&fit=crop" 
+                                 alt="Backyard Spa" 
+                                 class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                                 loading="lazy">
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-black text-gray-900 mb-2 uppercase text-sm tracking-wider">XS Scuba X Series 119</h3>
+                        <p class="text-xs text-gray-500 mb-4 leading-relaxed">The goals of our stores are very reliable and fair and we care about the customer</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-3xl font-black text-red-600">$500.00</span>
+                        </div>
+                        <button class="w-full bg-gradient-to-r from-red-600 to-red-700 text-white py-3 rounded-xl hover:from-red-700 hover:to-red-800 transition-all font-bold text-sm flex items-center justify-center shadow-lg hover:shadow-xl transform hover:-translate-y-1 add-to-cart-btn">
+                            <i class="fas fa-shopping-cart mr-2"></i>
+                            ADD TO CART
+                        </button>
+                        <div class="flex justify-between mt-4 text-xs">
+                            <a href="#" class="text-red-600 hover:text-red-700 font-bold uppercase tracking-wide">ADD TO WISHLIST</a>
+                            <a href="#" class="text-red-600 hover:text-red-700 font-bold uppercase tracking-wide">MORE DETAILS</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card bg-white border-2 border-gray-100 rounded-2xl overflow-hidden hover:shadow-2xl transition-all card-shine">
+                    <div class="relative group">
+                        <div class="aspect-square bg-gray-100 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=500&h=500&fit=crop" 
+                                 alt="Portable Spa" 
+                                 class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                                 loading="lazy">
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-black text-gray-900 mb-2 uppercase text-sm tracking-wider">XS Scuba X Series 119</h3>
+                        <p class="text-xs text-gray-500 mb-4 leading-relaxed">The goals of our stores are very reliable and fair and we care about the customer</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-3xl font-black text-red-600">$500.00</span>
+                        </div>
+                        <button class="w-full bg-gradient-to-r from-red-600 to-red-700 text-white py-3 rounded-xl hover:from-red-700 hover:to-red-800 transition-all font-bold text-sm flex items-center justify-center shadow-lg hover:shadow-xl transform hover:-translate-y-1 add-to-cart-btn">
+                            <i class="fas fa-shopping-cart mr-2"></i>
+                            ADD TO CART
+                        </button>
+                        <div class="flex justify-between mt-4 text-xs">
+                            <a href="#" class="text-red-600 hover:text-red-700 font-bold uppercase tracking-wide">ADD TO WISHLIST</a>
+                            <a href="#" class="text-red-600 hover:text-red-700 font-bold uppercase tracking-wide">MORE DETAILS</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card bg-white border-2 border-gray-100 rounded-2xl overflow-hidden hover:shadow-2xl transition-all card-shine">
+                    <div class="relative group">
+                        <div class="aspect-square bg-gray-100 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1601574968106-b312ac309953?w=500&h=500&fit=crop" 
+                                 alt="Luxury Outdoor Spa" 
+                                 class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                                 loading="lazy">
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-black text-gray-900 mb-2 uppercase text-sm tracking-wider">XS Scuba X Series 119</h3>
+                        <p class="text-xs text-gray-500 mb-4 leading-relaxed">The goals of our stores are very reliable and fair and we care about the customer</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-3xl font-black text-red-600">$500.00</span>
+                        </div>
+                        <button class="w-full bg-gradient-to-r from-red-600 to-red-700 text-white py-3 rounded-xl hover:from-red-700 hover:to-red-800 transition-all font-bold text-sm flex items-center justify-center shadow-lg hover:shadow-xl transform hover:-translate-y-1 add-to-cart-btn">
+                            <i class="fas fa-shopping-cart mr-2"></i>
+                            ADD TO CART
+                        </button>
+                        <div class="flex justify-between mt-4 text-xs">
+                            <a href="#" class="text-red-600 hover:text-red-700 font-bold uppercase tracking-wide">ADD TO WISHLIST</a>
+                            <a href="#" class="text-red-600 hover:text-red-700 font-bold uppercase tracking-wide">MORE DETAILS</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partner Logos Section -->
+    <section class="bg-white py-8 border-t">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-center items-center gap-8">
+                <div class="partner-logo">
+                    <svg width="180" height="80" viewBox="0 0 180 80" class="h-16">
+                        <rect width="180" height="80" rx="8" fill="#059669"/>
+                        <text x="90" y="35" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#FFF" text-anchor="middle">SAVE</text>
+                        <text x="90" y="60" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#FBBF24" text-anchor="middle">$1,000s</text>
+                    </svg>
+                </div>
+                <div class="partner-logo">
+                    <svg width="160" height="80" viewBox="0 0 160 80" class="h-16">
+                        <rect width="160" height="80" rx="8" fill="#0EA5E9"/>
+                        <circle cx="40" cy="40" r="15" fill="#FFF" opacity="0.8"/>
+                        <path d="M 60 50 Q 80 30 100 50 Q 120 70 140 50" stroke="#FFF" stroke-width="3" fill="none"/>
+                        <text x="80" y="45" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#FFF" text-anchor="middle">OceanicSpa</text>
+                    </svg>
+                </div>
+                <div class="partner-logo">
+                    <svg width="160" height="80" viewBox="0 0 160 80" class="h-16">
+                        <rect width="160" height="80" rx="8" fill="#DC2626"/>
+                        <circle cx="30" cy="40" r="12" fill="#FFA500" opacity="0.9"/>
+                        <circle cx="30" cy="40" r="8" fill="#FFD700"/>
+                        <text x="80" y="45" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#FFF" text-anchor="middle">Caldera Spas</text>
+                    </svg>
+                </div>
+                <div class="partner-logo">
+                    <svg width="160" height="80" viewBox="0 0 160 80" class="h-16">
+                        <rect width="160" height="80" rx="8" fill="#10B981"/>
+                        <path d="M 30 50 L 30 35 L 40 30 L 50 38 L 50 50 Z" fill="#FFF" opacity="0.9"/>
+                        <circle cx="35" cy="28" r="4" fill="#FBBF24"/>
+                        <text x="90" y="45" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#FFF" text-anchor="middle">Island Spas</text>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Contact Us -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4 text-red-500 uppercase">Contact Us</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>yourhotspainc.com</li>
+                        <li class="font-bold">CALL 24/7: 888 - 201 - 8889</li>
+                        <li>Your Address</li>
+                        <li>Your city</li>
+                        <li>State & Zip Code</li>
+                        <li>City & Country</li>
+                        <li>Email: services@yourhotspainc.com</li>
+                    </ul>
+                    <div class="flex space-x-3 mt-4">
+                        <a href="#" class="bg-blue-600 w-8 h-8 rounded-full flex items-center justify-center hover:bg-blue-700 transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="bg-blue-800 w-8 h-8 rounded-full flex items-center justify-center hover:bg-blue-900 transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="bg-blue-700 w-8 h-8 rounded-full flex items-center justify-center hover:bg-blue-800 transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="bg-red-600 w-8 h-8 rounded-full flex items-center justify-center hover:bg-red-700 transition">
+                            <i class="fab fa-google-plus-g"></i>
+                        </a>
+                        <a href="#" class="bg-red-700 w-8 h-8 rounded-full flex items-center justify-center hover:bg-red-800 transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="bg-red-600 w-8 h-8 rounded-full flex items-center justify-center hover:bg-red-700 transition">
+                            <i class="fab fa-pinterest-p"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Information -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4 text-red-500 uppercase">Information</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#" class="hover:text-red-500 transition">About Us</a></li>
+                        <li><a href="#" class="hover:text-red-500 transition">Customer Service</a></li>
+                        <li><a href="#" class="hover:text-red-500 transition">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-red-500 transition">Site Map</a></li>
+                        <li><a href="#" class="hover:text-red-500 transition">Search Terms</a></li>
+                        <li><a href="#" class="hover:text-red-500 transition">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-red-500 transition">About Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- My Account -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4 text-red-500 uppercase">My Account</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#" class="hover:text-red-500 transition">Sign In</a></li>
+                        <li><a href="#" class="hover:text-red-500 transition">View Cart</a></li>
+                        <li><a href="#" class="hover:text-red-500 transition">My Wishlist</a></li>
+                    </ul>
+                </div>
+
+                <!-- Signup for Newsletter -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4 text-red-500 uppercase">Signup for a Newsletter</h3>
+                    <form id="newsletterForm" class="mb-4">
+                        <input 
+                            type="email" 
+                            placeholder="Enter your email" 
+                            class="w-full px-4 py-2 mb-3 text-gray-800 rounded focus:outline-none focus:ring-2 focus:ring-red-500"
+                        >
+                        <button 
+                            type="submit" 
+                            class="w-full bg-red-600 px-4 py-2 rounded font-semibold hover:bg-red-700 transition uppercase"
+                        >
+                            Subscribe
+                        </button>
+                    </form>
+                    <div class="flex space-x-2 flex-wrap">
+                        <svg width="60" height="38" viewBox="0 0 60 38" class="h-8">
+                            <rect width="60" height="38" rx="4" fill="#1A1F71"/>
+                            <text x="30" y="24" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFF" text-anchor="middle">VISA</text>
+                        </svg>
+                        <svg width="60" height="38" viewBox="0 0 60 38" class="h-8">
+                            <rect width="60" height="38" rx="4" fill="#EB001B"/>
+                            <circle cx="22" cy="19" r="10" fill="#FF5F00" opacity="0.8"/>
+                            <circle cx="38" cy="19" r="10" fill="#F79E1B" opacity="0.8"/>
+                        </svg>
+                        <svg width="60" height="38" viewBox="0 0 60 38" class="h-8">
+                            <rect width="60" height="38" rx="4" fill="#006FCF"/>
+                            <text x="30" y="24" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#FFF" text-anchor="middle">AMEX</text>
+                        </svg>
+                        <svg width="60" height="38" viewBox="0 0 60 38" class="h-8">
+                            <rect width="60" height="38" rx="4" fill="#003087"/>
+                            <text x="30" y="24" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#FFF" text-anchor="middle">PayPal</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Copyright -->
+    <div class="bg-slate-950 text-gray-400 text-center py-4 text-sm">
+        <p>© 2016 Hotdealspainc.com. All Rights Reserved</p>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

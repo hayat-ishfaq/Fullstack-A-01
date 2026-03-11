@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assets Showcase - HOTSPRING</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .asset-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .asset-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .checkerboard {
+            background-image: 
+                linear-gradient(45deg, #f0f0f0 25%, transparent 25%),
+                linear-gradient(-45deg, #f0f0f0 25%, transparent 25%),
+                linear-gradient(45deg, transparent 75%, #f0f0f0 75%),
+                linear-gradient(-45deg, transparent 75%, #f0f0f0 75%);
+            background-size: 20px 20px;
+            background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 py-12">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-800 mb-4">HOTSPRING Assets Showcase</h1>
+            <p class="text-gray-600">All SVG assets used in the Edit Shipping Address page</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Favicon -->
+            <div class="asset-card bg-white rounded-lg shadow-lg p-6">
+                <h3 class="text-xl font-bold mb-4 text-gray-800">Favicon</h3>
+                <div class="checkerboard rounded-lg p-8 mb-4 flex items-center justify-center">
+                    <img src="favicon.svg" alt="Favicon" class="w-16 h-16">
+                </div>
+                <div class="text-sm text-gray-600">
+                    <p><strong>Size:</strong> 32x32</p>
+                    <p><strong>Format:</strong> SVG</p>
+                    <p><strong>Use:</strong> Browser tab icon</p>
+                </div>
+            </div>
+
+            <!-- Full Logo -->
+            <div class="asset-card bg-white rounded-lg shadow-lg p-6">
+                <h3 class="text-xl font-bold mb-4 text-gray-800">Full Logo</h3>
+                <div class="checkerboard rounded-lg p-8 mb-4 flex items-center justify-center">
+                    <img src="logo-full.svg" alt="Full Logo" class="w-32 h-32">
+                </div>
+                <div class="text-sm text-gray-600">
+                    <p><strong>Size:</strong> 200x200</p>
+                    <p><strong>Format:</strong> SVG</p>
+                    <p><strong>Use:</strong> Brand identity</p>
+                </div>
+            </div>
+
+            <!-- Loading Spinner -->
+            <div class="asset-card bg-white rounded-lg shadow-lg p-6">
+                <h3 class="text-xl font-bold mb-4 text-gray-800">Loading Spinner</h3>
+                <div class="checkerboard rounded-lg p-8 mb-4 flex items-center justify-center">
+                    <img src="loading.svg" alt="Loading" class="w-16 h-16">
+                </div>
+                <div class="text-sm text-gray-600">
+                    <p><strong>Size:</strong> 50x50</p>
+                    <p><strong>Format:</strong> Animated SVG</p>
+                    <p><strong>Use:</strong> Loading states</p>
+                </div>
+            </div>
+
+            <!-- Success Icon -->
+            <div class="asset-card bg-white rounded-lg shadow-lg p-6">
+                <h3 class="text-xl font-bold mb-4 text-gray-800">Success Icon</h3>
+                <div class="checkerboard rounded-lg p-8 mb-4 flex items-center justify-center">
+                    <img src="success.svg" alt="Success" class="w-24 h-24">
+                </div>
+                <div class="text-sm text-gray-600">
+                    <p><strong>Size:</strong> 100x100</p>
+                    <p><strong>Format:</strong> Animated SVG</p>
+                    <p><strong>Use:</strong> Success messages</p>
+                </div>
+            </div>
+
+            <!-- Background Pattern -->
+            <div class="asset-card bg-white rounded-lg shadow-lg p-6">
+                <h3 class="text-xl font-bold mb-4 text-gray-800">Background Pattern</h3>
+                <div class="rounded-lg p-8 mb-4 flex items-center justify-center border border-gray-200" style="background-image: url('background-pattern.svg'); background-repeat: repeat;">
+                    <div class="bg-white bg-opacity-80 px-4 py-2 rounded">
+                        <p class="text-sm font-semibold">Tileable Pattern</p>
+                    </div>
+                </div>
+                <div class="text-sm text-gray-600">
+                    <p><strong>Size:</strong> 100x100 (tiles)</p>
+                    <p><strong>Format:</strong> SVG Pattern</p>
+                    <p><strong>Use:</strong> Body background</p>
+                </div>
+            </div>
+
+            <!-- Color Palette -->
+            <div class="asset-card bg-white rounded-lg shadow-lg p-6">
+                <h3 class="text-xl font-bold mb-4 text-gray-800">Color Palette</h3>
+                <div class="space-y-3 mb-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-12 h-12 rounded bg-red-600 shadow"></div>
+                        <div>
+                            <p class="font-semibold text-sm">Primary Red</p>
+                            <p class="text-xs text-gray-500">#DC2626</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-12 h-12 rounded bg-white border-2 border-gray-300 shadow"></div>
+                        <div>
+                            <p class="font-semibold text-sm">White</p>
+                            <p class="text-xs text-gray-500">#FFFFFF</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-12 h-12 rounded bg-green-600 shadow"></div>
+                        <div>
+                            <p class="font-semibold text-sm">Success Green</p>
+                            <p class="text-xs text-gray-500">#10B981</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-sm text-gray-600">
+                    <p><strong>Use:</strong> Brand consistency</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Usage Examples -->
+        <div class="mt-12 bg-white rounded-lg shadow-lg p-8">
+            <h2 class="text-2xl font-bold mb-6 text-gray-800">Usage Examples</h2>
+            
+            <div class="space-y-6">
+                <!-- HTML Example -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-3 text-gray-700">HTML</h3>
+                    <pre class="bg-gray-900 text-gray-100 p-4 rounded overflow-x-auto text-sm"><code>&lt;!-- Favicon --&gt;
+&lt;link rel="icon" type="image/svg+xml" href="assets/favicon.svg"&gt;
+
+&lt;!-- Logo Image --&gt;
+&lt;img src="assets/logo-full.svg" alt="HOTSPRING" class="w-20 h-20"&gt;
+
+&lt;!-- Loading Spinner --&gt;
+&lt;img src="assets/loading.svg" alt="Loading..." class="w-8 h-8"&gt;
+
+&lt;!-- Success Icon --&gt;
+&lt;img src="assets/success.svg" alt="Success" class="w-16 h-16"&gt;</code></pre>
+                </div>
+
+                <!-- CSS Example -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-3 text-gray-700">CSS</h3>
+                    <pre class="bg-gray-900 text-gray-100 p-4 rounded overflow-x-auto text-sm"><code>/* Background Pattern */
+body {
+    background-image: url('assets/background-pattern.svg');
+    background-repeat: repeat;
+    background-size: 100px 100px;
+}</code></pre>
+                </div>
+
+                <!-- JavaScript Example -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-3 text-gray-700">JavaScript/jQuery</h3>
+                    <pre class="bg-gray-900 text-gray-100 p-4 rounded overflow-x-auto text-sm"><code>// Show loading spinner
+$('#loading').html('&lt;img src="assets/loading.svg" alt="Loading..." class="inline-block w-6 h-6"&gt;');
+
+// Show success message
+$('#status').html('&lt;img src="assets/success.svg" alt="Success" class="w-12 h-12"&gt;');</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="text-center mt-12 text-gray-600">
+            <p class="mb-2">All assets are in SVG format for maximum scalability</p>
+            <p class="text-sm">Created for HOTSPRING Portable Spas - Edit Shipping Address Page</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Or Create Account - HOTSPRING Portable Spas</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100">
+    <!-- Top Bar -->
+    <div class="bg-gray-100 border-b border-gray-300 py-2">
+        <div class="container mx-auto px-4 flex justify-between items-center text-sm">
+            <div class="text-gray-700">
+                Call for Customer support: <span class="text-red-600 font-bold">020 33889505</span>
+            </div>
+            <div class="flex items-center gap-6">
+                <a href="#" class="text-gray-700 hover:text-red-600">My Account</a>
+                <a href="#" class="text-gray-700 hover:text-red-600">Wishlist</a>
+                <a href="#" class="text-gray-700 hover:text-red-600">To Checkout</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-white py-4 shadow-md">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <h1 class="text-3xl font-black text-gray-800">
+                        <span class="text-red-600">HOTSPRING</span>
+                        <span class="text-sm block text-gray-600 font-normal">Portable Spas</span>
+                    </h1>
+                </div>
+
+                <!-- Cart -->
+                <div class="flex items-center">
+                    <button class="bg-red-600 text-white px-4 py-2 rounded flex items-center gap-2 hover:bg-red-700 transition">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>My Cart - 0 items ()</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bg-red-600 text-white">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between">
+                <ul class="flex items-center">
+                    <li><a href="#" class="block py-3 px-6 hover:bg-red-700 transition uppercase font-semibold">CATEGORY</a></li>
+                    <li><a href="#" class="block py-3 px-6 hover:bg-red-700 transition uppercase font-semibold">BRAND</a></li>
+                    <li><a href="#" class="block py-3 px-6 hover:bg-red-700 transition uppercase font-semibold">INFO</a></li>
+                </ul>
+                
+                <!-- Search Bar -->
+                <div class="flex">
+                    <input type="text" placeholder="Search..." class="px-4 py-2 w-96 text-gray-800 rounded-l focus:outline-none" id="searchInput">
+                    <button class="bg-gray-800 px-6 py-2 rounded-r hover:bg-gray-900 transition uppercase font-semibold">SEARCH</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="bg-white border-b py-3">
+        <div class="container mx-auto px-4">
+            <div class="text-sm text-gray-600">
+                <a href="#" class="text-red-600 hover:underline">Home</a> &gt; <span>My Account</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold text-gray-800 mb-8">Login Or Creat Account</h1>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 bg-white p-8 rounded-lg shadow-lg">
+            <!-- User Login Details -->
+            <div class="border-r border-gray-300 pr-8">
+                <h2 class="text-xl font-bold text-gray-800 mb-4">User Login Details</h2>
+                <p class="text-sm text-gray-600 mb-4">Please sign in below with your login information.</p>
+                <p class="text-xs text-gray-500 mb-4">*Required Fields</p>
+
+                <form id="loginForm">
+                    <div class="mb-4">
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">Email</label>
+                        <input type="email" id="loginEmail" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-red-500" required>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">Password</label>
+                        <input type="password" id="loginPassword" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-red-500" required>
+                    </div>
+
+                    <div class="mb-4 flex items-center">
+                        <input type="checkbox" id="rememberMe" class="mr-2">
+                        <label for="rememberMe" class="text-sm text-gray-700">Remember me till next time I visit</label>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <button type="submit" class="bg-red-600 text-white px-8 py-2 rounded font-bold hover:bg-red-700 transition">SIGN IN</button>
+                        <a href="#" class="text-sm text-blue-600 hover:underline">Forgot your password?</a>
+                    </div>
+                </form>
+            </div>
+
+            <!-- New Customer -->
+            <div class="pl-0 md:pl-8">
+                <h2 class="text-xl font-bold text-gray-800 mb-4">New Customer</h2>
+                <p class="text-sm text-gray-600 mb-4">As a registered first.com customer you can:</p>
+                <ul class="list-disc list-inside text-sm text-gray-700 space-y-2 mb-6">
+                    <li>Shop faster & receive information</li>
+                    <li>Check your order status</li>
+                    <li>Track your delivery Status</li>
+                    <li>Manage your address book</li>
+                </ul>
+
+                <button id="createAccountBtn" class="bg-red-600 text-white px-8 py-2 rounded font-bold hover:bg-red-700 transition">CREATE NEW ACCOUNT</button>
+            </div>
+        </div>
+
+        <!-- Customers Who Viewed This Item Also -->
+        <section class="mt-12 bg-white p-8 rounded-lg shadow-lg">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">Customers Who Viewed This Item Also</h2>
+            
+            <div class="relative">
+                <div class="flex gap-4 overflow-x-auto pb-4" id="productsCarousel">
+                    <!-- Product 1 -->
+                    <div class="min-w-[200px] flex-shrink-0 text-center">
+                        <div class="bg-gray-100 p-4 rounded mb-2">
+                            <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=200&h=200&fit=crop" alt="Product" class="w-full h-40 object-cover rounded">
+                        </div>
+                        <p class="text-sm text-gray-600 mb-1">$2,849.15</p>
+                        <p class="text-xs text-gray-500">Novita 26 Cu. Ft Sapleles</p>
+                        <p class="text-xs text-gray-500">Refrigerator</p>
+                        <button class="text-xs text-blue-600 mt-2 hover:underline">Item Comparison</button>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="min-w-[200px] flex-shrink-0 text-center">
+                        <div class="bg-gray-100 p-4 rounded mb-2">
+                            <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=200&h=200&fit=crop" alt="Product" class="w-full h-40 object-cover rounded">
+                        </div>
+                        <p class="text-sm text-gray-600 mb-1">$2,849.15</p>
+                        <p class="text-xs text-gray-500">Novita 26 Cu. Ft Sapleles</p>
+                        <p class="text-xs text-gray-500">Refrigerator</p>
+                        <button class="text-xs text-blue-600 mt-2 hover:underline">Item Comparison</button>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="min-w-[200px] flex-shrink-0 text-center">
+                        <div class="bg-gray-100 p-4 rounded mb-2">
+                            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=200&h=200&fit=crop" alt="Product" class="w-full h-40 object-cover rounded">
+                        </div>
+                        <p class="text-sm text-gray-600 mb-1">$2,849.15</p>
+                        <p class="text-xs text-gray-500">Novita 26 Cu. Ft Sapleles</p>
+                        <p class="text-xs text-gray-500">Refrigerator</p>
+                        <button class="text-xs text-blue-600 mt-2 hover:underline">Item Comparison</button>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="min-w-[200px] flex-shrink-0 text-center">
+                        <div class="bg-gray-100 p-4 rounded mb-2">
+                            <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=200&h=200&fit=crop" alt="Product" class="w-full h-40 object-cover rounded">
+                        </div>
+                        <p class="text-sm text-gray-600 mb-1">$2,849.15</p>
+                        <p class="text-xs text-gray-500">Novita 26 Cu. Ft Sapleles</p>
+                        <p class="text-xs text-gray-500">Refrigerator</p>
+                        <button class="text-xs text-blue-600 mt-2 hover:underline">Item Comparison</button>
+                    </div>
+
+                    <!-- Product 5 -->
+                    <div class="min-w-[200px] flex-shrink-0 text-center">
+                        <div class="bg-gray-100 p-4 rounded mb-2">
+                            <img src="https://images.unsplash.com/photo-1597218868981-1b68e15f0065?w=200&h=200&fit=crop" alt="Product" class="w-full h-40 object-cover rounded">
+                        </div>
+                        <p class="text-sm text-gray-600 mb-1">$2,849.15</p>
+                        <p class="text-xs text-gray-500">Novita 26 Cu. Ft Sapleles</p>
+                        <p class="text-xs text-gray-500">Refrigerator</p>
+                        <button class="text-xs text-blue-600 mt-2 hover:underline">Item Comparison</button>
+                    </div>
+                </div>
+
+                <!-- Navigation Arrows -->
+                <button class="absolute left-0 top-1/2 -translate-y-1/2 bg-white shadow-lg rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-100" id="prevBtn">
+                    <i class="fas fa-chevron-left text-gray-600"></i>
+                </button>
+                <button class="absolute right-0 top-1/2 -translate-y-1/2 bg-white shadow-lg rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-100" id="nextBtn">
+                    <i class="fas fa-chevron-right text-gray-600"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- Partner Logos -->
+        <section class="mt-8">
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <div class="flex flex-wrap justify-center items-center gap-8">
+                    <div class="partner-logo">
+                        <svg width="180" height="80" viewBox="0 0 180 80" class="h-16">
+                            <rect width="180" height="80" rx="8" fill="#059669"/>
+                            <text x="90" y="35" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#FFF" text-anchor="middle">SAVE</text>
+                            <text x="90" y="60" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#FBBF24" text-anchor="middle">$1,000s</text>
+                        </svg>
+                    </div>
+                    <div class="partner-logo">
+                        <svg width="160" height="80" viewBox="0 0 160 80" class="h-16">
+                            <rect width="160" height="80" rx="8" fill="#0EA5E9"/>
+                            <circle cx="40" cy="40" r="15" fill="#FFF" opacity="0.8"/>
+                            <path d="M 60 50 Q 80 30 100 50 Q 120 70 140 50" stroke="#FFF" stroke-width="3" fill="none"/>
+                            <text x="80" y="45" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#FFF" text-anchor="middle">OceanicSpa</text>
+                        </svg>
+                    </div>
+                    <div class="partner-logo">
+                        <svg width="160" height="80" viewBox="0 0 160 80" class="h-16">
+                            <rect width="160" height="80" rx="8" fill="#EF4444"/>
+                            <circle cx="30" cy="40" r="12" fill="#FFA500" opacity="0.9"/>
+                            <circle cx="30" cy="40" r="8" fill="#FFD700"/>
+                            <text x="90" y="45" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#FFF" text-anchor="middle">Caldera Spas</text>
+                        </svg>
+                    </div>
+                    <div class="partner-logo">
+                        <svg width="160" height="80" viewBox="0 0 160 80" class="h-16">
+                            <rect width="160" height="80" rx="8" fill="#10B981"/>
+                            <path d="M 30 50 L 30 35 L 40 30 L 50 38 L 50 50 Z" fill="#FFF" opacity="0.9"/>
+                            <circle cx="35" cy="28" r="4" fill="#FBBF24"/>
+                            <text x="100" y="45" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#FFF" text-anchor="middle">Island Spas</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-12 mt-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                
+                <!-- Contact Us -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4 text-red-500 uppercase">Contact Us</h3>
+                    <p class="text-sm mb-2">yourhotoainc.com</p>
+                    <p class="text-sm font-bold mb-2">CALL 24/7: 888 - 201 - 8899</p>
+                    <p class="text-sm">Your Address</p>
+                    <p class="text-sm">Your city</p>
+                    <p class="text-sm">State & Zip Code</p>
+                    <p class="text-sm">City & Country</p>
+                    <p class="text-sm mt-4">Email: <a href="mailto:servicesale@yourhotspainc.com" class="text-blue-400">servicesale@yourhotspainc.com</a></p>
+                    <div class="flex gap-2 mt-4">
+                        <a href="#" class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center hover:bg-blue-600"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-8 h-8 bg-blue-700 rounded-full flex items-center justify-center hover:bg-blue-800"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center hover:bg-red-700"><i class="fab fa-google-plus-g"></i></a>
+                        <a href="#" class="w-8 h-8 bg-red-700 rounded-full flex items-center justify-center hover:bg-red-800"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center hover:bg-red-600"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+
+                <!-- Information -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4 text-red-500 uppercase">Information</h3>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><a href="#" class="hover:text-white">ABOUT US</a></li>
+                        <li><a href="#" class="hover:text-white">CUSTOMER SERVICE</a></li>
+                        <li><a href="#" class="hover:text-white">PRIVACY POLICY</a></li>
+                        <li><a href="#" class="hover:text-white">SITE MAP</a></li>
+                        <li><a href="#" class="hover:text-white">SEARCH TERMS</a></li>
+                        <li><a href="#" class="hover:text-white">CONTACT US</a></li>
+                        <li><a href="#" class="hover:text-white">ABOUT US</a></li>
+                    </ul>
+                </div>
+
+                <!-- My Account -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4 text-red-500 uppercase">My Account</h3>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><a href="#" class="hover:text-white">SIGN IN</a></li>
+                        <li><a href="#" class="hover:text-white">VIEW CART</a></li>
+                        <li><a href="#" class="hover:text-white">MY WISHLIST</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4 text-red-500 uppercase">Signup For A Newsletter</h3>
+                    <p class="text-sm text-gray-300 mb-4">Signup for our mailing list</p>
+                    <form class="flex mb-4">
+                        <input type="email" placeholder="Enter your email" class="px-4 py-2 w-full text-gray-800 rounded-l focus:outline-none">
+                        <button class="bg-red-600 px-4 py-2 rounded-r hover:bg-red-700 transition">GO</button>
+                    </form>
+                    <h4 class="text-sm font-bold mb-2">PAYMENT SOLUTIONS</h4>
+                    <div class="flex gap-2">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/200px-Visa_Inc._logo.svg.png" alt="Visa" class="h-8 bg-white p-1 rounded">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/MasterCard_Logo.svg/200px-MasterCard_Logo.svg.png" alt="MasterCard" class="h-8 bg-white p-1 rounded">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/PayPal.svg/200px-PayPal.svg.png" alt="PayPal" class="h-8 bg-white p-1 rounded">
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-sm text-gray-400">
+                © 2016 firstdogsource.com. All Rights Reserved
+            </div>
+        </div>
+    </footer>
+
+    <!-- Notification Toast -->
+    <div id="notification" class="fixed top-4 right-4 bg-white shadow-lg rounded-lg p-4 hidden transform transition-all duration-300">
+        <div class="flex items-center gap-3">
+            <div id="notificationIcon" class="text-2xl"></div>
+            <div>
+                <h4 id="notificationTitle" class="font-bold text-gray-800"></h4>
+                <p id="notificationMessage" class="text-sm text-gray-600"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
